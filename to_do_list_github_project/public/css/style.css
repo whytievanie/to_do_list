@@ -12,6 +12,10 @@ header {
     text-align: center;
 }
 
+.searchdiv {
+    margin-bottom: 1rem;
+}
+
 .showmain {
     padding-top: 1rem;
     display: flex;
@@ -32,7 +36,7 @@ header {
     background: #D9F0FF;
     text-align: center;
     width: 50rem;
-    height: 25vh;
+    height: 32vh;
 }
 
 .mainshowdiv {
@@ -40,7 +44,7 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 58vh;
+    min-height: 57vh;
 }
 
 .showmain ul {

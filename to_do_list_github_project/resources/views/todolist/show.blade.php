@@ -18,6 +18,10 @@
                 <li>{{ $task->name}}</li>
                 <li class="headtextli">De beschrijving van deze taak</li>
                 <li>{{ $task->description}}</li>
+                <li class="headtextli">Deze datum is de datum wanneer de taak is aangemaakt</li>
+                <li>{{ $task->created_at}}</li>
+                <li class="headtextli">Deze datum is de datum wanneer de taak is geüpdatet</li>
+                <li>{{ $task->updated_at}}</li>
             </ul>
         </div>
     </div>

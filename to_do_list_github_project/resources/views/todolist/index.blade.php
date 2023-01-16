@@ -18,17 +18,6 @@
 
     <div class="indexmain">
         <div>
-        <div class="searchdiv">
-            <input 
-            type="text" 
-            name="search" 
-            value="{{ request()->get('search') }}" 
-            class="form-control" 
-            placeholder="Search..." 
-            aria-label="Search" 
-            aria-describedby="button-addon2">
-          <button class="btn btn-success" type="submit" id="button-addon2">Search</button>
-        </div>
 
             @if(count($tasks) > 0)
 
