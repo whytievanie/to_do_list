@@ -15,11 +15,15 @@ class TodolistController extends Controller
      */
     public function index()
     {
-        $tasks = Task::all();
-        return view('todolist.index', 
-        [
-            'tasks' => DB::table('tasks')->paginate(7)
-        ]);
+        // $tasks = Task::all();
+        // return view('todolist.index', 
+        // [
+        //     'tasks' => DB::table('tasks')->paginate(7)
+        // ]);
+
+        // $tasks = Task::sortable()->paginate(6);
+        $tasks = Task::paginate(7);
+        return view('todolist.index',compact('tasks'));
     }
 
     /**
@@ -47,7 +51,8 @@ class TodolistController extends Controller
         
         Task::create($request->post());
 
-        return redirect()->route('todolist.index')->with('success','Task has been created successfully.');
+        // return redirect()->route('todolist.index')->with('success','Task has been created successfully.');
+        return redirect()->route('todolist.index');
     }
 
     /**
@@ -92,10 +97,11 @@ class TodolistController extends Controller
         
         $task->update($request->all());
 
-        return redirect()->route('todolist.index')->with('success','Task Has Been updated successfully');
+        // return redirect()->route('todolist.index')->with('success','Task Has Been updated successfully');
+        return redirect()->route('todolist.index');
     }
 
-   /**
+    /**
     * Remove the specified resource from storage.
     *
     * @param  \App\Models\Task $task
@@ -104,7 +110,19 @@ class TodolistController extends Controller
     public function destroy(Task $task, $id)
     {
         Task::find($id)->delete();
-        return redirect()->route('todolist.index')->with('success','Task has been deleted successfully');
+        // return redirect()->route('todolist.index')->with('success','Task has been deleted successfully');
+        return redirect()->route('todolist.index');
+    }
+
+    public function namesort()
+    {
+        $tasks = Task::all();
+  
+        $sorted = $tasks->sortBy('name');
+  
+        $sorted->all();
+    
+        dd($sorted);
     }
 
 }

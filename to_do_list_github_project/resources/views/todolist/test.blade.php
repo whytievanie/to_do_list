@@ -59,3 +59,7 @@
     // {
     //     return view('todolist.show');
     // } 
+
+     <!-- <form method="POST" action="{{ route('todolist.namesort') }}">
+            <button type="submit" class="indexdeletebutton">Verwijderen</button>
+        </form>  -->

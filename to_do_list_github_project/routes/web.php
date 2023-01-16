@@ -20,7 +20,6 @@ Route::get('/', function () {
 
 Route::resource('todolist', TodolistController::class);
 
-// Route::get('todolist/index', [TodolistController::class, 'index']);
 // Route::get('todolist/create', [TodolistController::class, 'create']);
 // Route::get('todolist/show', [TodolistController::class, 'show']);
 // Route::get('todolist/edit', [TodolistController::class, 'edit']);

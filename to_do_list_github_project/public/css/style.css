@@ -39,6 +39,20 @@ header {
     height: 32vh;
 }
 
+.sortablelinkh3 {
+    padding-bottom: 2rem;
+}
+
+.sortablelinkh3 a {
+    text-decoration: none;
+    background: #83C9F4;
+    color: #009DDC;
+    border: 1px solid #83C9F4;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
 .mainshowdiv {
     display: flex;
     justify-content: center;
@@ -259,10 +273,11 @@ nav a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 1.5rem;  
+    padding: 1rem;  
 }
 
 .navpaginator {
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
 }
