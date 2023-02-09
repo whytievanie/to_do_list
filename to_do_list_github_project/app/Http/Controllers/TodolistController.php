@@ -114,15 +114,15 @@ class TodolistController extends Controller
         return redirect()->route('todolist.index');
     }
 
-    public function namesort()
-    {
-        $tasks = Task::all();
+    // public function namesort()
+    // {
+    //     $tasks = Task::all();
   
-        $sorted = $tasks->sortBy('name');
+    //     $sorted = $tasks->sortBy('name');
   
-        $sorted->all();
+    //     $sorted->all();
     
-        dd($sorted);
-    }
+    //     dd($sorted);
+    // }
 
 }
